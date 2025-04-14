@@ -5,7 +5,9 @@ body{
 }
 .container{
     flex: 1;
+    /* padding-top: 160px; */
 }
+
 h3{
     color:  rgb(219, 96, 96) !important;
 }
@@ -19,7 +21,8 @@ h3{
 /* navbar */
 .navbar {
     height: 5rem;
-   background-color:transparent;
+   /* background-color:transparent; */
+   z-index: 1030;
 }
 
 .fa-compass{

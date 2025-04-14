@@ -17,9 +17,15 @@
   .search-inp{
     border-radius: 25px; 
     padding: 0.5rem 3rem 0.5rem 3rem;
+
   }
+
+  #customNavbar {
+  transition: height 0.6s ease; /* Smooth height transition */
+  overflow: hidden;
+}
 </style>
-<nav class="navbar navbar-expand-md bg-body-tertiary sticky-top">
+<nav class="navbar navbar-expand-md bg-body-tertiary sticky-top" id="customNavbar">
     <div class="container-fluid">
       <a class="navbar-brand" href="/listings"><i class="fa-regular fa-compass"></i></a>
 
@@ -50,3 +56,19 @@
       </div>
     </div>
   </nav>
+
+  <script>
+   let navbar = document.querySelector(".navbar-toggler-icon");
+   let expand = document.querySelector(".navbar");
+   let isExpanded = false;
+    navbar.addEventListener("click",()=>{
+      if(isExpanded){
+        expand.style.height= "5rem";
+      }
+    else{
+      expand.style.height= "16rem";
+    }
+
+    isExpanded = !isExpanded;
+    });
+  </script>
